@@ -17,6 +17,7 @@ def raw_line_formatter(raw_line:str):
     year = re.findall(pattern, line_list[0])[0]
     year_pos = line_list[0].find(year) -2
     name = line_list[0][:year_pos-1]
+    # year = int(line_list[0][year_pos+1:year_pos+5])
 
     if "(" in line_list[-1]:
         location = line_list[-2]
