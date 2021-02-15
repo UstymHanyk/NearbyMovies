@@ -36,12 +36,14 @@ def read_data(database:str):
     return data_list
 
 def select_year(movie_list:list, year:int):
-
+    """
+    Select movies filmed in a specific year and returns a list of tuples (name, location)
+    """
     n_year_movies = []
     for movie in movie_list:
         if year in movie:
             n_year_movies.append((movie[0],movie[-1]))
     return n_year_movies
 
-# data = read_data("locations.list")
-# print(select_year(data,2012))
+# data = read_data("smaller_locations.list")
+# print(len(select_year(data,2010)))
